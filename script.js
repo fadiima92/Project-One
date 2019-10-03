@@ -1,26 +1,13 @@
-$("#search-btn").on("click", function() {
-    var nameYelp = $(this).attr("user-input");
-
-    // Perfoming an AJAX GET request to our queryURL
+$("#searchBTN").on("click", function(event) {
+    event.preventDefault();
+    var nameYelp = ("#userInput").text();
+    var queryURL = "https://api.yelp.com/v3/businesses/" + nameYelp + "/reviews?Bearer p2BCOzqktHtTdM68Yjo08bWKwPDdJacKL3kNyryQ43Eer5ICLMW8hXuqDt3uazvyJoyLDT_X-qzNvYV1w2CDeMRJQiE4d-o_fWTDfhtBgbnnAXExlmVfFYt7mfGUXXYx";
     $.ajax({
       url: queryURL,
       method: "GET"
     })
-
-    // After the data from the AJAX request comes back
       .then(function(response) {
+      console.log(response);
 
-      // Saving the image_original_url property
-        var imageUrl = response.data.image_original_url;
-
-        // Creating and storing an image tag
-        var catImage = $("<img>");
-
-        // Setting the catImage src attribute to imageUrl
-        catImage.attr("src", imageUrl);
-        catImage.attr("alt", "cat image");
-
-        // Prepending the catImage to the images div
-        $("#images").prepend(catImage);
       });
   });
