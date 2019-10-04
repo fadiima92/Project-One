@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-$.ajax({
-    url: "https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy",
-    method: "GET"
-  }).then(function(response) {
-    console.log(response);
-  });
-=======
 function searchPlaces() {
 
     // setting variables for link to google
@@ -26,4 +18,3 @@ function searchPlaces() {
 }
 
 searchPlaces();
->>>>>>> cbd19961b4e85f9624649c9fe1f09b4923acd1b5
