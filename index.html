@@ -31,7 +31,7 @@
         <!-- END header -->
 
 
-<!-- beging of container for google and yelp reviews -->
+<!-- beginning of container for google and yelp reviews -->
     <div class="container">
         <div id="flow">
             <span class="flow-1"></span>
@@ -61,19 +61,14 @@
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
-                                    <figure class="image is-96x96">
-                                        <img src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg" alt="Image">
-                                    </figure>
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-4 no-padding">GOOGLE</p>
-                                    <p><span class="title is-6"><a href="http://twitter.com/#"></a></span></p>
                                     <p class="subtitle is-6">Google reviews</p>
                                 </div>
                             </div>
-                            <div class="content">
+                            <div id="google-review-section" class="content">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus eaque vitae sunt consequatur itaque! Sunt aspernatur et soluta aliquid impedit eos repellendus, at debitis molestiae repudiandae voluptates quisquam quo porro.
-                                <div class="background-icon"><span class="icon-twitter"></span></div>
                             </div>
                         </div>
                     </div>
@@ -89,19 +84,16 @@
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
-                                    <figure class="image is-96x96">
-                                        <img src="https://cdn.discordapp.com/avatars/244932903530659841/0c924a19fcf1b5c59bc9dc1b58b61bb0.jpg?size=1024" alt="Image">
-                                    </figure>
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-4 no-padding">Comparison</p>
-                                    <p><span class="title is-6"><a href="http://twitter.com/#"></a></span></p>
                                     <p class="subtitle is-6">The Boys Review</p>
+                                                <br>
+                                    <a class="button is-info is-outlined" id="compareBTN">COMPARE RESULTS</a>
                                 </div>
                             </div>
-                            <div class="content">
+                            <div id="compared-review-section" class="content">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quae ea totam architecto possimus? Earum mollitia modi aliquam, fugiat illum architecto iusto, nisi ratione veniam explicabo debitis repellat, commodi officia.
-                                <div class="background-icon"><span class="icon-facebook"></span></div><a class="button is-warning">COMPARE RESULTS</a>
                             </div>
                         </div>
                     </div>
@@ -115,20 +107,13 @@
                         </div>
                         <div class="card-content">
                             <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-96x96">
-                                        <img src="https://i.imgsafe.org/a5/a5e978ce20.jpeg" alt="Image">
-                                    </figure>
-                                </div>
                                 <div class="media-content">
                                     <p class="title is-4 no-padding">YELP</p>
-                                    <p><span class="title is-6"><a href="http://twitter.com/#"></a></span></p>
                                     <p class="subtitle is-6">Yelp Reivews</p>
                                 </div>
                             </div>
-                            <div class="content">
+                            <div id="yelp-review-section" class="content">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum consequatur numquam aliquam tenetur ad amet inventore hic beatae, quas accusantium perferendis sapiente explicabo, corporis totam! Labore reprehenderit beatae magnam animi!
-                                <div class="background-icon"><span class="icon-barcode"></span></div>
                             </div>
                         </div>
                     </div>
@@ -140,6 +125,7 @@
         </div>
     </div>
     <!-- end of container for all yelp and google reviews -->
+
     <footer class="footer">
             <div class="container">
                 <div class="content has-text-centered">
@@ -158,7 +144,6 @@
             
         
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="../js/bulma.js"></script>
     <script src="script.js"></script>
     <script src="gscript.js"></script>
 </body>
