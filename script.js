@@ -14,6 +14,14 @@ $("#searchBTN").on("click", function(event) {
     })
       .then(function(response) {
       console.log(response);
-
+      var results = response.businesses;
+      var rating = results[0].rating;
+      var name = results[0].name;
+      var address = results[0].location.address1 + " " + results[0].location.city;
+      $("#yelp-title").text(name);
+      $("#yelp-rating").text("Rating: "+ rating);
+      console.log(name);
+      console.log(rating);
+      console.log(address);
       });
   });
