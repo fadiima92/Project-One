@@ -3,7 +3,8 @@ $("#searchBTN").on("click", function(event) {
     event.preventDefault();
     var nameYelp = $("#userInput").val();
     console.log(nameYelp);
-    var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?latitude=37.786882&longitude=-122.399972&term=" + nameYelp;
+    var location = "latitude=33.6450053&longitude=-117.83510860000001";
+    var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?" + location + "&term=" + nameYelp;
     $.ajax({
       url: queryURL,
       headers: {
