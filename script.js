@@ -17,11 +17,11 @@ $("#searchBTN").on("click", function(event) {
       var results = response.businesses;
       var rating = results[0].rating;
       var name = results[0].name;
-      var address = results[0].location.address1 + " " + results[0].location.city;
+      var address = results[0].location.address1 + ", " + results[0].location.city + ", " +  results[0].location.state + " " + results[0].location.zip_code + ", " + results[0].location.country;
+      
       $("#yelp-title").text(name);
+      $("#yelp-address").text(address);
       $("#yelp-rating").text("Rating: "+ rating);
-      console.log(name);
-      console.log(rating);
-      console.log(address);
+
       });
   });
