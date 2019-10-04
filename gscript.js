@@ -35,16 +35,35 @@ function searchPlaces() {
     }).then(function (response) {
         var name = response.candidates[0].name;
         var rating = response.candidates[0].rating;
+        var address = response.candidates[0].formatted_address;
         console.log(response);
-        // console.log("selectror: " + response.candidates.formatted_address)
+        console.log("selectror: " + response.candidates.formatted_address)
         console.log(response.candidates[0].formatted_address)
         $('#google-title').text(name);
         $('#google-rating').text("Rating: " + rating);
+        $('#google-address').text(address);
 
 
         
     });
-    console.log(queryURL)
+    // console.log(queryURL)
+    // $.ajax({
+    //     url: queryURL,
+    //     method: "GET"
+    // }).then(function (response) {
+    //     var name = response.candidates[0].name;
+    //     var rating = response.candidates[0].rating;
+    //     var address = response.candidates[0].formatted_address;
+    //     console.log(response);
+    //     console.log("selectror: " + response.candidates.formatted_address)
+    //     console.log(response.candidates[0].formatted_address)
+    //     $('#google-title').text(name);
+    //     $('#google-rating').text("Rating: " + rating);
+    //     $('#google-address').text(address);
+
+
+        
+    // });
 }
 $('#searchBTN').click(searchPlaces);
 
