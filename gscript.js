@@ -1,7 +1,7 @@
 function searchPlaces() {
 
     // setting variables for link to google
-    var googlePlaces = "food";
+    var googlePlaces = $('#userInput').val();
     var location = "locationbias=point:33.6450053,-117.83510860000001";
     var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=" 
     + googlePlaces + 
@@ -21,6 +21,10 @@ function searchPlaces() {
     });
     console.log(queryURL)
 }
+$('#searchBTN').click(searchPlaces);
 
-searchPlaces();
+
+// function displayResults() {
+
+// }
 
