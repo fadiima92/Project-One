@@ -7,3 +7,10 @@ h1 {
 h2 {
     text-align: center;
 }
+
+
+#compareBTN {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 7px;
+}
