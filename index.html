@@ -14,7 +14,7 @@
 
 <body>
         <!-- Working on header -->
-        <section class="hero is-medium is-primary is-bold">
+        <section class="hero is-medium is-dark is-bold">
                 <div class="hero-body">
                   <div class="container">
                     <h1 class="title">
@@ -25,6 +25,27 @@
                     </h2>
                   </div>
                 </div>
+                <div class="hero-foot">
+                        <nav class="tabs is-boxed is-fullwidth">
+                          <div class="container">
+                            <ul>
+                              <li class="is-active">
+                              <li>
+                                <a>HOME</a>
+                              </li>
+                              <li>
+                                <a>YELP</a>
+                              </li>
+                              <li>
+                                <a>GOOGLE</a>
+                              </li>
+                              <li>
+                                <a>MAP</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+                      </div>
               </section>
 
 
@@ -63,8 +84,9 @@
                                 <div class="media-left">
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4 no-padding">GOOGLE</p>
-                                    <p class="subtitle is-6">Google reviews</p>
+                                    <p id="google-title" class="title is-4 no-padding">GOOGLE</p>
+                                    <p id="google-rating" class=" subtitle is-6">Rating</p>
+                                    <p id="google-reviews" class="subtitle is-6">Google reviews</p>
                                 </div>
                             </div>
                             <div id="google-review-section" class="content">
@@ -86,8 +108,9 @@
                                 <div class="media-left">
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4 no-padding">Comparison</p>
-                                    <p class="subtitle is-6">The Boys Review</p>
+                                    <p id="compaired-title" class="title is-4 no-padding">Comparison</p>
+                                    <p id="compaired-rating" class=" subtitle is-6">Rating</p>
+                                    <p id="compaired-reviews" class="subtitle is-6">The Boys Review</p>
                                                 <br>
                                     <a class="button is-info is-outlined" id="compareBTN">COMPARE RESULTS</a>
                                 </div>
@@ -108,8 +131,9 @@
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
-                                    <p class="title is-4 no-padding">YELP</p>
-                                    <p class="subtitle is-6">Yelp Reivews</p>
+                                    <p id="yelp-title" class="title is-4 no-padding">YELP</p>
+                                    <p id="yelp-rating" class=" subtitle is-6">Rating</p>
+                                    <p id="yelp-reviews" class="subtitle is-6">Yelp Reivews</p>
                                 </div>
                             </div>
                             <div id="yelp-review-section" class="content">
@@ -127,13 +151,18 @@
     <!-- end of container for all yelp and google reviews -->
 
     <footer class="footer">
+        <div id="map-location" class="container">
+            <div class="content has-text-centered">
+                <a href="">MAP LOCATION WILL GO HERE</a>
+            </div>
+        </div>
             <div class="container">
                 <div class="content has-text-centered">
                     <div class="soc">
-                        <a href="#"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://github.com/fadiima92/Project-One/tree/gh-pages"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
                     </div>
                     <p>
                         <strong>THE BOIS</strong>

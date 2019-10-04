@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<<<< Temporary merge branch 1
+<<<<<<< HEAD
+=========
+//////HEAD
+>>>>>>>>> Temporary merge branch 2
+$.ajax({
+    url: "https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy",
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+  });
+<<<<<<<<< Temporary merge branch 1
+=======
+=========
+
+>>>>>>>>> Temporary merge branch 2
+>>>>>>> 2576c2ac0baaaa658b091a87a7c003e5da05332f
 function searchPlaces() {
 
     // setting variables for link to google
