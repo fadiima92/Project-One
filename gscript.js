@@ -39,8 +39,8 @@ function searchPlaces() {
         // console.log("selectror: " + response.candidates.formatted_address)
         console.log(response.candidates[0].formatted_address)
         $('#google-title').text(name);
-        console.log(rating);
-        $('#google-rating').text(rating);
+        $('#google-rating').text("Rating: " + rating);
+
 
         
     });
