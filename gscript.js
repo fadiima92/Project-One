@@ -14,8 +14,11 @@ function searchPlaces() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
+        var name = response.candidates[0].name;
         console.log(response);
-
+        // console.log("selectror: " + response.candidates.formatted_address)
+        console.log(response.candidates[0].formatted_address)
+        $('#google-title').text(name)
 
         
     });
@@ -24,7 +27,9 @@ function searchPlaces() {
 $('#searchBTN').click(searchPlaces);
 
 
+
 // function displayResults() {
 
 // }
 
+// candidates[""0""].formatted_address
