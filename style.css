@@ -5,6 +5,7 @@ h1 {
     -webkit-text-stroke: 0.1px black;
     text-align: center;
     color: #7da2a9 !important;
+    letter-spacing: 2px;
 }
 
 #compareBTN {
@@ -19,14 +20,14 @@ iframe {
     height: 500px;
     width: 1300px;
 }
-#iYelp, 
-#iGoogle {
+#iYelp, #iGoogle {
     text-align: center;
 }
 
 .hero-body {
     background-color: #f7f7f7 !important;
 }
+
 #navBar {
     
 }
