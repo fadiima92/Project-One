@@ -1,0 +1,21 @@
+
+h1 {
+    text-align: center;
+    
+    }
+
+h2 {
+    text-align: center;
+}
+
+
+#compareBTN {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 7px;
+}
+
+iframe {
+    height: 500px;
+    width: 1200px;
+}
