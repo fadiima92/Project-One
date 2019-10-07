@@ -5,52 +5,60 @@
     <meta charset="UTF-8">
     <title>The Afterthot</title>
     <link rel="shortcut icon" href="./afterthot.jpg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Source+Sans+Pro&display=swap"
+        rel="stylesheet">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+        integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 
 </head>
 
 <body>
-        <!-- Working on header -->
-        <section id="headerSect" class="hero is-medium is-dark is-bold">
-                <div class="hero-body">
-                  <div class="container">
-                    <h1 class="title" style="text-decoration: line-through dotted #e2775f; font-size: 100px;">
-                      The Afterthot
-                    </h1>
-                  </div>
+    <!-- Working on header -->
+    <section id="headerSect" class="hero is-medium is-dark is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title" style="text-decoration: line-through dotted #e2775f; font-size: 100px;">
+                    The Afterthot
+                </h1>
+            </div>
+        </div>
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth" id="navBar">
+                <div class="container">
+                    <ul>
+                        <li class="is-active">
+                        <li>
+                            <a href="file:///Users/fadialexander/Documents/Project-One/index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="https://www.yelp.com/">YELP</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.google.com/search?sxsrf=ACYBGNRPRsfGt_n2Jz0hj1igkxT-V1Oyyw:1570223867596&q=google+restaurant+reviews&npsic=0&rflfq=1&rlha=0&rllag=33649687,-117835685,347&tbm=lcl&ved=2ahUKEwio6eHew4PlAhVVgp4KHdj_DSYQjGp6BAgKEFs&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!3sIAEqAlVT,lf:1,lf_ui:9&rldoc=1#rlfi=hd:;si:;mv:[[33.651424299999995,-117.83142380000001],[33.64465260000001,-117.84292339999999]];tbs:lrf:!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAEqAlVT,lf:1,lf_ui:9">GOOGLE</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/fadiima92/Project-One">PROJECT ONE</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="hero-foot">
-                        <nav class="tabs is-boxed is-fullwidth" id="navBar">
-                          <div class="container">
-                            <ul>
-                              <li class="is-active">
-                              <li>
-                                <a href="file:///Users/fadialexander/Documents/Project-One/index.html">HOME</a>
-                              </li>
-                              <li>
-                                <a href="https://www.yelp.com/">YELP</a>
-                              </li>
-                              <li>
-                                <a href="https://www.google.com/search?sxsrf=ACYBGNRPRsfGt_n2Jz0hj1igkxT-V1Oyyw:1570223867596&q=google+restaurant+reviews&npsic=0&rflfq=1&rlha=0&rllag=33649687,-117835685,347&tbm=lcl&ved=2ahUKEwio6eHew4PlAhVVgp4KHdj_DSYQjGp6BAgKEFs&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!3sIAEqAlVT,lf:1,lf_ui:9&rldoc=1#rlfi=hd:;si:;mv:[[33.651424299999995,-117.83142380000001],[33.64465260000001,-117.84292339999999]];tbs:lrf:!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAEqAlVT,lf:1,lf_ui:9">GOOGLE</a>
-                              </li>
-                              <li>
-                                <a href="https://github.com/fadiima92/Project-One">PROJECT ONE</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </nav>
-                      </div>
-              </section>
+            </nav>
+        </div>
+    </section>
 
 
-        <!-- END header -->
+    <!-- END header -->
 
 
-<!-- beginning of container for google and yelp reviews -->
+    <!-- beginning of container for google and yelp reviews -->
     <div class="container">
         <div id="flow">
             <span class="flow-1"></span>
@@ -61,7 +69,8 @@
             <div class="box">
                 <div class="field has-addons">
                     <div class="control is-expanded">
-                        <input id="userInput" class="input has-text-centered" type="search" placeholder="» » » » » » Insert Business Name « « « « « «">
+                        <input id="userInput" class="input has-text-centered" type="search"
+                            placeholder="» » » » » » Insert Business Name « « « « « «">
                     </div>
                     <div class="control">
                         <a id="searchBTN" class="button is-info">Search</a>
@@ -74,7 +83,7 @@
                     <div class="card large" style="background-color:">
                         <div class="card-image">
                             <div style="font-size: 24px; color: #db3236; border: solid 5px #333333;">
-                                <i class="fab fa-google fa-10x"></i> 
+                                <i class="fab fa-google fa-10x"></i>
                             </div>
                         </div>
                         <div class="card-content">
@@ -90,7 +99,7 @@
                                 </div>
                             </div>
                             <div id="google-review-section" class="content">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -109,12 +118,12 @@
                                     <p id="address" class="subtitle is-6"></p>
                                     <p id="compaired-rating" class=" subtitle is-6"></p>
                                     <p id="compaired-reviews" class="subtitle is-6"></p>
-                                                <br>
+                                    <br>
                                     <a class="button is-info is-outlined" id="compareBTN">COMPARE RESULTS</a>
                                 </div>
                             </div>
                             <div id="compared-review-section" class="content">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -137,42 +146,59 @@
                                 </div>
                             </div>
                             <div id="yelp-review-section" class="content">
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="map-location" class="container">
-                <div class="content has-text-centered">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.6430864312247!2d-117.84648488479561!3d33.64049518071986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcde0e2592bf91%3A0x79fbc5d0b6dab7ec!2sUniversity%20of%20California%20Irvine!5e0!3m2!1sen!2sus!4v1570220815043!5m2!1sen!2sus" width="600" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                </div>
-            </div>
+            <script>
+
+            </script>
         </div>
     </div>
     <!-- end of container for all yelp and google reviews -->
 
     <footer class="footer">
         </div>
-            <div class="container">
-                <div class="content has-text-centered">
-                    <div style="font-size: 10px;">
-                        <a href="https://github.com/rick/roll/blob/master/docs/rickroll.gif"><i class="fab fa-github-alt fa-3x"></i></a>
-                        <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><i class="fab fa-youtube-square fa-3x"></i></a>
-                        <a href="https://www.facebook.com/rickroll548/"><i class="fab fa-facebook-f fa-3x"></i></a>
-                        <a href="https://twitter.com/rickroll?lang=en"><i class="fab fa-twitter fa-3x"></i></a>
-                    </div>
-                    <p>
-                        <strong>THE BOIS</strong>
-                    </p>
+        <div class="container">
+            <div class="content has-text-centered">
+                <div style="font-size: 10px;">
+                    <a href="https://github.com/rick/roll/blob/master/docs/rickroll.gif"><i
+                            class="fab fa-github-alt fa-3x"></i></a>
+                    <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><i
+                            class="fab fa-youtube-square fa-3x"></i></a>
+                    <a href="https://www.facebook.com/rickroll548/"><i class="fab fa-facebook-f fa-3x"></i></a>
+                    <a href="https://twitter.com/rickroll?lang=en"><i class="fab fa-twitter fa-3x"></i></a>
                 </div>
+                <p>
+                    <strong>THE BOIS</strong>
+                </p>
+                <h3>The Bois Have Tracked Your Location</h3>
+
+                <div id="map"></div>
+                <script>
+
+                    function initMap() {
+
+                        var uluru = { lat: -25.344, lng: 131.036 };
+
+                        var map = new google.maps.Map(
+                            document.getElementById('map'), { zoom: 4, center: uluru });
+
+                        var marker = new google.maps.Marker({ position: uluru, map: map });
+                    }
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGe3kt3IzV8XbIQWDNC3AnkDTA1yWcdlQ&callback=initMap"></script>
             </div>
-        </footer>
-            
-        
+        </div>
+    </footer>
+
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="geomap.js"></script>
     <script src="script.js"></script>
     <script src="gscript.js"></script>
 </body>
+
 </html>
