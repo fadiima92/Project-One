@@ -42,7 +42,7 @@ function searchPlaces() {
         $('#google-title').text(name);
         $('#google-rating').text("Rating: " + rating);
         $('#google-address').text(address);
-        
+        console.log(response)
 
         
     });
