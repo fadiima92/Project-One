@@ -24,9 +24,11 @@ function searchPlaces() {
     var location = "locationbias=point:33.6450053,-117.83510860000001";
     var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=" 
     + googlePlaces + 
-    "&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&"
+    "&inputtype=textquery&fields=place_id,photos,formatted_address,name,rating,opening_hours,geometry&"
     + location + 
     "&key=AIzaSyBGe3kt3IzV8XbIQWDNC3AnkDTA1yWcdlQ";
+
+
 
     // ajax call
     $.ajax({
@@ -36,30 +38,26 @@ function searchPlaces() {
         var name = response.candidates[0].name;
         var rating = response.candidates[0].rating;
         var address = response.candidates[0].formatted_address;
-        console.log(response);
-        console.log("selectror: " + response.candidates.formatted_address)
-        console.log(response.candidates[0].formatted_address)
+        var placeId = response.candidates[0].place_id;
         $('#google-title').text(name);
         $('#google-rating').text("Rating: " + rating);
         $('#google-address').text(address);
-
+        
 
         
     });
-    // console.log(queryURL)
+    // var detailsQueryUrl = "https://maps.googleapis.com/maps/api/place/details/json?place_id="
+    // + placeId + "&fields=name,rating,formatted_phone_number,reviews&key=AIzaSyBGe3kt3IzV8XbIQWDNC3AnkDTA1yWcdlQ";
+
+
     // $.ajax({
-    //     url: queryURL,
+    //     url: detailsQueryUrl,
     //     method: "GET"
     // }).then(function (response) {
-    //     var name = response.candidates[0].name;
-    //     var rating = response.candidates[0].rating;
-    //     var address = response.candidates[0].formatted_address;
     //     console.log(response);
-    //     console.log("selectror: " + response.candidates.formatted_address)
-    //     console.log(response.candidates[0].formatted_address)
-    //     $('#google-title').text(name);
-    //     $('#google-rating').text("Rating: " + rating);
-    //     $('#google-address').text(address);
+    //     // var phoneNumber = 
+        
+       
 
 
         
