@@ -41,11 +41,11 @@ function searchPlaces() {
         method: "GET"
     }).then(function (response) {
         var name = response.candidates[0].name;
-        var rating = response.candidates[0].rating;
+        ratingG = response.candidates[0].rating;
         var address = response.candidates[0].formatted_address;
         var placeId = response.candidates[0].place_id;
         $('#google-title').text(name);
-        $('#google-rating').text("Rating: " + rating);
+        $('#google-rating').text("Rating: " + ratingG);
         $('#google-address').text(address);
         console.log(response)
 
