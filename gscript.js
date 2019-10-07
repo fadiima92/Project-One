@@ -17,8 +17,13 @@
 
 // >>>>>>>>> Temporary merge branch 2
 // >>>>>>> 2576c2ac0baaaa658b091a87a7c003e5da05332f
-function searchPlaces() {
 
+
+var ratingG; // Global variable for comapare
+
+
+function searchPlaces() {
+    
     // setting variables for link to google
     var googlePlaces = $('#userInput').val();
     var location = "locationbias=point:33.6450053,-117.83510860000001";
@@ -36,11 +41,11 @@ function searchPlaces() {
         method: "GET"
     }).then(function (response) {
         var name = response.candidates[0].name;
-        ratingG = response.candidates[0].rating;
+        var rating = response.candidates[0].rating;
         var address = response.candidates[0].formatted_address;
         var placeId = response.candidates[0].place_id;
         $('#google-title').text(name);
-        $('#google-rating').text("Rating: " + ratingG);
+        $('#google-rating').text("Rating: " + rating);
         $('#google-address').text(address);
         console.log(response)
 
