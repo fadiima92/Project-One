@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>The Afterthot</title>
     <link rel="shortcut icon" href="./afterthot.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
@@ -17,16 +18,13 @@
         <section id="headerSect" class="hero is-medium is-dark is-bold">
                 <div class="hero-body">
                   <div class="container">
-                    <h1 class="title">
+                    <h1 class="title" style="text-decoration: line-through dotted #e2775f; font-size: 100px;">
                       The Afterthot
                     </h1>
-                    <h2 class="subtitle">
-                      <a href="https://github.com/fadiima92/Project-One.git">Project one</a>
-                    </h2>
                   </div>
                 </div>
                 <div class="hero-foot">
-                        <nav class="tabs is-boxed is-fullwidth">
+                        <nav class="tabs is-boxed is-fullwidth" id="navBar">
                           <div class="container">
                             <ul>
                               <li class="is-active">
@@ -40,7 +38,7 @@
                                 <a href="https://www.google.com/search?sxsrf=ACYBGNRPRsfGt_n2Jz0hj1igkxT-V1Oyyw:1570223867596&q=google+restaurant+reviews&npsic=0&rflfq=1&rlha=0&rllag=33649687,-117835685,347&tbm=lcl&ved=2ahUKEwio6eHew4PlAhVVgp4KHdj_DSYQjGp6BAgKEFs&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!3sIAEqAlVT,lf:1,lf_ui:9&rldoc=1#rlfi=hd:;si:;mv:[[33.651424299999995,-117.83142380000001],[33.64465260000001,-117.84292339999999]];tbs:lrf:!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAEqAlVT,lf:1,lf_ui:9">GOOGLE</a>
                               </li>
                               <li>
-                                <p id="location"><button onclick="getLocation()">MAP</button></p>
+                                <a href="https://github.com/fadiima92/Project-One">PROJECT ONE</a>
                               </li>
                             </ul>
                           </div>
@@ -73,9 +71,9 @@
 
             <div class="row columns">
                 <div id="iGoogle" class="column is-one-third">
-                    <div class="card large">
+                    <div class="card large" style="background-color:">
                         <div class="card-image">
-                            <div style="font-size: 24px; color: tomato;">
+                            <div style="font-size: 24px; color: #db3236; border: solid 5px #333333;">
                                 <i class="fab fa-google fa-10x"></i> 
                             </div>
                         </div>
@@ -101,7 +99,7 @@
                     <div class="card large">
                         <div class="card-image">
                         </div>
-                        <div class="card-content">
+                        <div class="card-content" style="border: solid 5px #7da2a9; background-color: #e3e3e3;">
                             <div class="media">
                                 <div class="media-left">
                                 </div>
@@ -124,7 +122,7 @@
                 <div id="iYelp" class="column is-one-third">
                     <div class="card large">
                         <div class="card-image">
-                            <div style="font-size: 10em; color: green;">
+                            <div style="font-size: 10em; color: #d32323; border: solid 5px #333333;">
                                 <i class="fab fa-yelp fa-10px"></i>
                             </div>
                         </div>
@@ -158,11 +156,11 @@
         </div>
             <div class="container">
                 <div class="content has-text-centered">
-                    <div class="soc">
-                        <a href="https://github.com/rick/roll/blob/master/docs/rickroll.gif"><i class="fab fa-github-alt"></i></a>
-                        <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><i class="fab fa-youtube-square"></i></a>
-                        <a href="https://www.facebook.com/rickroll548/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/rickroll?lang=en"><i class="fab fa-twitter"></i></a>
+                    <div style="font-size: 10px;">
+                        <a href="https://github.com/rick/roll/blob/master/docs/rickroll.gif"><i class="fab fa-github-alt fa-3x"></i></a>
+                        <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><i class="fab fa-youtube-square fa-3x"></i></a>
+                        <a href="https://www.facebook.com/rickroll548/"><i class="fab fa-facebook-f fa-3x"></i></a>
+                        <a href="https://twitter.com/rickroll?lang=en"><i class="fab fa-twitter fa-3x"></i></a>
                     </div>
                     <p>
                         <strong>THE BOIS</strong>
@@ -173,6 +171,7 @@
             
         
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="geomap.js"></script>
     <script src="script.js"></script>
     <script src="gscript.js"></script>
 </body>

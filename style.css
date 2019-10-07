@@ -1,24 +1,23 @@
-
+body {
+    font-family: 'Source Sans Pro', sans-serif, 'Open Sans Condensed', sans-serif;
+}
 h1 {
-    text-align: center;
-    color: #7da2a9 !important;
-    }
-
-h2 {
+    -webkit-text-stroke: 0.1px black;
     text-align: center;
     color: #7da2a9 !important;
 }
-
 
 #compareBTN {
     margin-left: 25%;
     margin-right: 25%;
     padding: 7px;
+    background-color: #d32323;
+    color: #f7f7f7;
 }
 
 iframe {
     height: 500px;
-    width: 1200px;
+    width: 1300px;
 }
 #iYelp, 
 #iGoogle {
@@ -27,4 +26,7 @@ iframe {
 
 .hero-body {
     background-color: #f7f7f7 !important;
+}
+#navBar {
+    
 }
