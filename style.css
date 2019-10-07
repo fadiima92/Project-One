@@ -1,17 +1,18 @@
 
 h1 {
     text-align: center;
-    
+    color: #7da2a9 !important;
     }
 
 h2 {
     text-align: center;
+    color: #7da2a9 !important;
 }
 
 
 #compareBTN {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 25%;
+    margin-right: 25%;
     padding: 7px;
 }
 
@@ -22,4 +23,8 @@ iframe {
 #iYelp, 
 #iGoogle {
     text-align: center;
+}
+
+.hero-body {
+    background-color: #f7f7f7 !important;
 }
