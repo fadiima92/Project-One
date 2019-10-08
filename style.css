@@ -1,21 +1,68 @@
-
+html, body {
+    font-family: 'Source Sans Pro', sans-serif, 'Open Sans Condensed', sans-serif;
+    background-color: #fed701;
+}
 h1 {
     text-align: center;
-    
-    }
+    color: #191919 !important;
+    letter-spacing: 2px;
+}
+#searchBTN {
+    background-color: #85dbf2 !important;
+}
+#searchBTN:hover {
+    background-color: #191919 !important;
+}
+#compareBTN:hover {
+    background-color: #191919;
+}
+#compareBTN {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 7px;
+    background-color: #85dbf2;
+    color: #f7f7f7;
+    border: solid 3px white;
+    border-radius: 20%;
+}
 
-h2 {
+#iYelp, #iGoogle {
     text-align: center;
 }
 
-
-#compareBTN {
-    margin-left: 30%;
-    margin-right: 30%;
-    padding: 7px;
+.hero-body {
+    background-color: #f7f7f7 !important;
+}
+#floating-panel {
+    position: absolute;
+    border-top: 5px;
+    left: 33%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
 }
 
-iframe {
-    height: 500px;
-    width: 1200px;
+#latlng {
+    width: 225px;
+}
+
+#navBar {
+    background-color: #fed701;
+}
+
+#homebtn,
+#yelpbtn,
+#gobtn,
+#projbtn {
+    color: #191919 !important;
+}
+
+#foodIcons {
+    text-align: center;
+    display: block;
 }
