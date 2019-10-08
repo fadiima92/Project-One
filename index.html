@@ -17,8 +17,6 @@
             height: 700px;
             width: auto;
         }
-
-        
     </style>
 
 </head>
@@ -31,6 +29,25 @@
                 <h1 class="title" style="text-decoration: line-through dotted #e2775f; font-size: 100px;">
                     The Afterthot
                 </h1>
+                <div id="foodIcons">
+                    <ol>
+                        <li style="display:block;">
+                            <span style="font-size: 3em; color: #884037"><i class="fas fa-pizza-slice"></i></span>
+                        </li>
+                        <li style="display:block;">
+                            <span style="font-size: 3em; color: #884037"><i class="fas fa-hamburger"></i></span>
+                        </li>
+                        <li style="display:block;">
+                            <span style="font-size: 3em; color: #884037"><i class="fas fa-drumstick-bite"></i></span>
+                        </li>
+                        <li style="display:block;">
+                            <span style="font-size: 3em; color: #884037"><i class="fas fa-hotdog"></i></span>
+                        </li>
+                        <li style="display:block;">
+                            <span style="font-size: 3em; color: #884037"><i class="fas fa-cheese"></i></span>
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
         <div class="hero-foot">
@@ -39,17 +56,17 @@
                     <ul>
                         <li class="is-active">
                         <li>
-                            <a href="file:///Users/fadialexander/Documents/Project-One/index.html">HOME</a>
+                            <a id="homebtn" href="file:///Users/fadialexander/Documents/Project-One/index.html">HOME</a>
                         </li>
                         <li>
-                            <a href="https://www.yelp.com/">YELP</a>
+                            <a id="yelpbtn" href="https://www.yelp.com/">YELP</a>
                         </li>
                         <li>
-                            <a
+                            <a id="gobtn"
                                 href="https://www.google.com/search?sxsrf=ACYBGNRPRsfGt_n2Jz0hj1igkxT-V1Oyyw:1570223867596&q=google+restaurant+reviews&npsic=0&rflfq=1&rlha=0&rllag=33649687,-117835685,347&tbm=lcl&ved=2ahUKEwio6eHew4PlAhVVgp4KHdj_DSYQjGp6BAgKEFs&tbs=lrf:!2m4!1e17!4m2!17m1!1e2!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!3sIAEqAlVT,lf:1,lf_ui:9&rldoc=1#rlfi=hd:;si:;mv:[[33.651424299999995,-117.83142380000001],[33.64465260000001,-117.84292339999999]];tbs:lrf:!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAEqAlVT,lf:1,lf_ui:9">GOOGLE</a>
                         </li>
                         <li>
-                            <a href="https://github.com/fadiima92/Project-One">PROJECT ONE</a>
+                            <a id="projbtn" href="https://github.com/fadiima92/Project-One">PROJECT ONE</a>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +86,7 @@
             <span class="flow-3"></span>
         </div>
         <div class="section">
-            <div class="box">
+            <div class="box" style="border-radius: 20%;">
                 <div class="field has-addons">
                     <div class="control is-expanded">
                         <input id="userInput" class="input has-text-centered" type="search"
@@ -83,9 +100,9 @@
 
             <div class="row columns">
                 <div id="iGoogle" class="column is-one-third">
-                    <div class="card large">
-                        <div class="card-image">
-                            <div style="font-size: 24px; color: #db3236; border: solid 5px #333333;">
+                    <div class="card large" style="border-radius: 20%;">
+                        <div class="card-content">
+                            <div style="font-size: 24px; color: #884037;">
                                 <i class="fab fa-google fa-10x"></i>
                             </div>
                         </div>
@@ -108,10 +125,10 @@
                     </div>
                 </div>
                 <div class="column is-one-third">
-                    <div class="card large">
-                        <div class="card-image">
+                    <div class="card large" style="border-radius: 20%;">
+                        <div class="card-content">
                         </div>
-                        <div class="card-content" style="border: solid 5px #7da2a9; background-color: #e3e3e3;">
+                        <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
                                 </div>
@@ -132,9 +149,9 @@
                     </div>
                 </div>
                 <div id="iYelp" class="column is-one-third">
-                    <div class="card large">
+                    <div class="card large" style="border-radius: 20%;">
                         <div class="card-image">
-                            <div style="font-size: 10em; color: #d32323; border: solid 5px #333333;">
+                            <div style="font-size: 10em; color: #884037;">
                                 <i class="fab fa-yelp fa-10px"></i>
                             </div>
                         </div>
@@ -179,21 +196,38 @@
                 </p>
                 <h3>The Bois Have Tracked Your Location</h3>
                 <div id="floating-panel">
-                    <input id="latlng" type="text" value="40.714224, -73.961452">
-                    <input id="submit" type="button" value="Reverse Geocode">
+                    <input id="latlng" type="text" value="">
+                    <input id="submit" type="button" value="Click to Find Yourself">
                 </div>
                 <div id="map"></div>
-                <p id="demo"></p>
+                <p id="userLatLong"></p>
                 <script>
+                    let latlng = document.getElementById("latlng").value;
+                    function getLocation() {
+                        if (navigator.geolocation) {
+                            console.log('Your location is supported!');
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } else {
+                            latlng.innerHTML = "Sorry but your browser sucks.";
+                        }
+                    }
+                    function showPosition(position) {
+                        latlng.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+                        console.log(latlng);
+                    }
+                    getLocation();
+                    userLocation.innerHTML = latlng;
+
+
                     function initMap() {
-                        var map = new google.maps.Map(document.getElementById('map'), { 
-                            zoom: 8, 
-                            center: {lat: 40.731, lng: -73.997} 
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 8,
+                            center: { lat: 40.731, lng: -73.997 }
                         });
                         var geocoder = new google.maps.Geocoder;
                         var infowindow = new google.maps.Infowindow;
 
-                        document.getElementById('submit').addEventListener('click', function() {
+                        document.getElementById('submit').addEventListener('click', function () {
                             geocodeLatLng(geocoder, map, infowindow);
                         });
                     }
@@ -201,8 +235,8 @@
                     function geocodeLatLng(geocoder, map, infowindow) {
                         var input = document.getElementById('latlng').value;
                         var latlngStr = input.split(',', 2);
-                        var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
-                        geocoder.geocode({'location': latlng}, function(result, status) {
+                        var latlng = { lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1]) };
+                        geocoder.geocode({ 'location': latlng }, function (result, status) {
                             if (status === "OK") {
                                 if (results[0]) {
                                     map.setZoom(11);
@@ -220,10 +254,12 @@
                             }
                         });
                     }
+
+
                 </script>
+
                 <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFqM4bfWg4tL1GO5oz25GFjEfbUAuF9hc&callback=initMap">
-                </script>
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFqM4bfWg4tL1GO5oz25GFjEfbUAuF9hc&callback=initMap"></script>
             </div>
         </div>
     </footer>
